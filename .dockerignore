@@ -1,0 +1,7 @@
+.git
+tests
+k8s
+*.db
+__pycache__
+Jenkinsfile
+README.md

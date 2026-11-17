@@ -1,0 +1,11 @@
+services:
+  canteen:
+    build: .
+    ports: ["5000:5000"]
+    environment:
+      SECRET_KEY: change-me-before-demo
+      STAFF_EMAIL: staff@canteen.local
+      STAFF_PASSWORD: staff123
+    volumes: ["canteen-data:/data"]
+volumes:
+  canteen-data:
