@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Secret
+metadata: { name: canteen-secrets }
+type: Opaque
+stringData:
+  SECRET_KEY: "replace-with-a-long-random-string"
+  STAFF_PASSWORD: "replace-staff-password"
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata: { name: canteen-data }
+spec:
+  accessModes: [ReadWriteOnce]
+  resources: { requests: { storage: 1Gi } }
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: smart-canteen, labels: { app: smart-canteen } }
+spec:
+  replicas: 1            # SQLite on one volume => keep a single replica
+  strategy: { type: Recreate }
+  selector: { matchLabels: { app: smart-canteen } }
+  template:
+    metadata: { labels: { app: smart-canteen } }
+    spec:
+      securityContext: { fsGroup: 10001 }
+      containers:
+        - name: canteen
+          image: YOUR_DOCKERHUB_USER/smart-canteen:latest   # replaced by Jenkins
+          ports: [{ containerPort: 5000 }]
+          envFrom: [{ secretRef: { name: canteen-secrets } }]
+          readinessProbe: { httpGet: { path: /health, port: 5000 }, initialDelaySeconds: 3, periodSeconds: 10 }
+          livenessProbe: { httpGet: { path: /health, port: 5000 }, initialDelaySeconds: 10, periodSeconds: 20 }
+          resources: { requests: { cpu: 50m, memory: 64Mi }, limits: { cpu: 300m, memory: 256Mi } }
+          volumeMounts: [{ name: data, mountPath: /data }]
+      volumes:
+        - name: data
+          persistentVolumeClaim: { claimName: canteen-data }

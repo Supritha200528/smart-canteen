@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="riceGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef3c7"/>
+      <stop offset="100%" stop-color="#fde68a"/>
+    </linearGradient>
+    <filter id="lSh" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="600" height="400" fill="#14213d"/>
+  <circle cx="300" cy="180" r="125" fill="rgba(234, 88, 12, 0.12)"/>
+
+  <!-- Steel Thali Platter -->
+  <circle cx="300" cy="205" r="135" fill="#cbd5e1" filter="url(#lSh)"/>
+  <circle cx="300" cy="205" r="126" fill="#f1f5f9"/>
+
+  <!-- Central Rice Heap -->
+  <circle cx="300" cy="205" r="48" fill="url(#riceGrad)" stroke="#f59e0b" stroke-width="1.5"/>
+  <circle cx="300" cy="205" r="12" fill="#16a34a" opacity="0.6"/> <!-- Coriander garnish -->
+
+  <!-- Katori Bowls around thali -->
+  <!-- Paneer Curry -->
+  <circle cx="230" cy="140" r="28" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="230" cy="140" r="23" fill="#ea580c"/>
+  <rect x="220" y="132" width="12" height="12" fill="#fef3c7" rx="2"/>
+  <rect x="232" y="138" width="10" height="10" fill="#fef3c7" rx="2"/>
+
+  <!-- Dal Tadka -->
+  <circle cx="370" cy="140" r="28" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="370" cy="140" r="23" fill="#eab308"/>
+  <circle cx="370" cy="140" r="6" fill="#b45309"/>
+
+  <!-- Curd -->
+  <circle cx="205" cy="220" r="26" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="205" cy="220" r="21" fill="#ffffff"/>
+
+  <!-- Sabzi -->
+  <circle cx="395" cy="220" r="26" fill="#e2e8f0" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="395" cy="220" r="21" fill="#15803d"/>
+
+  <!-- Rotis folded -->
+  <path d="M 260 270 Q 285 240 310 270 Q 285 285 260 270 Z" fill="#d97706" opacity="0.8"/>
+  <path d="M 285 275 Q 315 245 345 275 Q 315 290 285 275 Z" fill="#b45309" opacity="0.9"/>
+
+  <!-- Footer text -->
+  <rect x="0" y="325" width="600" height="75" fill="rgba(11, 19, 36, 0.85)"/>
+  <text x="300" y="358" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="800" fill="#ea580c" text-anchor="middle" letter-spacing="1">AUTHENTIC INDIAN MEALS</text>
+  <text x="300" y="382" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="500" fill="#cbd5e1" text-anchor="middle">Wholesome Thalis, Biryani, Curries &amp; Rotis</text>
+
+  <!-- Veg tag -->
+  <rect x="25" y="25" width="28" height="28" rx="5" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <circle cx="39" cy="39" r="6.5" fill="#16a34a"/>
+</svg>

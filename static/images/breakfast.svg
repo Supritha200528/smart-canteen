@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bfGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#b45309"/>
+      <stop offset="50%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <filter id="bfShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <rect width="600" height="400" fill="#14213d"/>
+  <circle cx="300" cy="180" r="120" fill="rgba(245, 158, 11, 0.12)"/>
+  
+  <!-- Plate -->
+  <ellipse cx="300" cy="235" rx="170" ry="38" fill="#cbd5e1" filter="url(#bfShadow)"/>
+  <ellipse cx="300" cy="230" rx="155" ry="32" fill="#f8fafc"/>
+  
+  <!-- Dosa Roll -->
+  <path d="M 180 205 Q 300 170 420 195 L 430 220 Q 300 195 170 225 Z" fill="url(#bfGrad)" filter="url(#bfShadow)"/>
+  
+  <!-- Idli / Vada on Plate -->
+  <ellipse cx="230" cy="230" rx="36" ry="18" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="2"/>
+  <ellipse cx="280" cy="242" rx="30" ry="16" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="2"/>
+
+  <!-- Chutney Bowls -->
+  <circle cx="370" cy="238" r="22" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <circle cx="370" cy="238" r="17" fill="#f8fafc"/>
+  <circle cx="370" cy="238" r="14" fill="#16a34a"/> <!-- Mint Chutney -->
+  
+  <circle cx="420" cy="230" r="20" fill="#ffffff" stroke="#cbd5e1" stroke-width="2"/>
+  <circle cx="420" cy="230" r="13" fill="#ea580c"/> <!-- Sambar -->
+
+  <!-- Steam -->
+  <path d="M 270 160 Q 280 135 268 115 T 275 85" fill="none" stroke="#fcd34d" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+  <path d="M 320 165 Q 335 140 320 120 T 330 90" fill="none" stroke="#fcd34d" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+
+  <!-- Footer text -->
+  <rect x="0" y="325" width="600" height="75" fill="rgba(11, 19, 36, 0.85)"/>
+  <text x="300" y="358" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="22" font-weight="800" fill="#f59e0b" text-anchor="middle" letter-spacing="1">HOT BREAKFAST SPECIAL</text>
+  <text x="300" y="382" font-family="'Plus Jakarta Sans', system-ui, sans-serif" font-size="13" font-weight="500" fill="#cbd5e1" text-anchor="middle">Crisp Dosas, Fluffy Idlis, Vada &amp; Chutneys</text>
+
+  <!-- Veg tag -->
+  <rect x="25" y="25" width="28" height="28" rx="5" fill="#ffffff" stroke="#16a34a" stroke-width="2.5"/>
+  <circle cx="39" cy="39" r="6.5" fill="#16a34a"/>
+</svg>
